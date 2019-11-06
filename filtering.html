@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+  </script>
+</head>
+
+<body
+  ng-init="dict=[{name:'Luis', age: 31}, {name:'Scott', age: 29}, {name:'Ben', age: 32}, {name:'Courtney', age: 31}]">
+
+  <!-- ng-model is going to search throuhg the list below -->
+  <input type="text" ng-model="search">
+  <ul>
+    <!-- we add a pipe use the filter and the method used - in this case 'search' -->
+    <li ng-repeat="item in dict | filter:search">
+      {{item.name}} - <em> {{item.age}}</em>
+    </li>
+  </ul>
+</body>
+
+</html>

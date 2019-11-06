@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+  </script>
+</head>
+
+<!-- ng-init tnis is to initialize the data -->
+
+<body ng-init="dict=[{name:'Luis', age: 31}, {name:'Scott', age: 29}]">
+  <ul>
+    <!-- this is how we can iterate throgh some data and use it on the dom -->
+    <li ng-repeat="item in dict">
+      {{item.name}} - <em> {{item.age}}</em>
+    </li>
+  </ul>
+</body>
+
+</html>
